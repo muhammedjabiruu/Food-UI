@@ -1,0 +1,27 @@
+   <!-- Navigation-->
+   <div style="position: fixed; width: 100%; z-index: 9; ">
+   <nav class="navbar navbar-expand-lg navbar-light py-4" style="background-color: rgb(42, 42, 42); color: white; border-bottom: .5px solid rgba(255, 255, 255, 0.284);" >
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" routerLink="/">
+            <h1 class="text-light"><i class="fa-sharp fa-solid fa-plate-wheat"></i> Food Mart</h1>
+
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <input  type="text" class="form-control" placeholder="search your content" (keyup)="search($event)">
+                <li class="nav-item"><a class="nav-link active text-light" aria-current="page" routerLink="products/wishlist">Wishlist</a></li>
+            </ul>
+
+          
+            <form class="d-flex">
+                <a class="btn btn-outline-light" type="submit" routerLink="products/cart">
+                    <i class="bi-cart-fill me-1 " style="color: white;"></i>
+                    Favourite <i class="fa-sharp fa-solid fa-heart" style="color: red;"></i>
+                    <span class="badge text-light ms-1 rounded-pill fs-6" style="font-weight: 400;">   {{cartcount}} </span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav></div>

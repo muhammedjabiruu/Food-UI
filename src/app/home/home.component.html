@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+
+<section class="" style="background-color: black; color: white; padding-top: 100px;">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <!-- <div class="col mb-5" *ngFor="let product of allProducts | filter:'men' :'title'"> -->
+            <div class="col mb-5 " *ngFor="let product of allproducts | filter:searchTerm :'title'">
+                <div class="card h-100 card-hover bg-dark" style="box-shadow: 1px 0px 25px #3e4d0a3d;">
+                    <!-- Product image-->
+                    <div class="img-container"><img class="card-img-top" [src]="product.image" alt="..." /></div>
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.item }} ({{product.origin}})</h5>
+                            <!-- Product price--> 
+                            {{product.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <button class="btn btn-outline-dark mt-auto ml-3 text-danger" (click)="addtowishlist(product)" (click)="addtocart(product)"><i class="fa-sharp fa-solid fa-heart " style="color: white;"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
